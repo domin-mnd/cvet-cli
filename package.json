@@ -62,7 +62,10 @@
   },
   "bugs": "https://github.com/Domin-MND/cvet-cli/issues",
   "keywords": [
-    "color", "colors", "web", "cli"
+    "color",
+    "colors",
+    "web",
+    "cli"
   ],
   "types": "dist/index.d.ts"
 }
