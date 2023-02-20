@@ -1,7 +1,7 @@
 {
   "name": "@cvet/cli",
   "version": "2.2.5",
-  "description": "Cvet CLI color tool",
+  "description": "CLI tool for colors in your projects",
   "author": "Domin-MND",
   "bin": {
     "cvet": "./bin/run"
