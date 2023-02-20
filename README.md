@@ -35,7 +35,7 @@ Each of those commands require an argument - HEX of the color:
 <img alt="Tints" src="public/tints.png" width="100%" />
 
 However there's a little exception - `combination` command which has an
-optional flag to provide - -q/--quantity. This flag defines how many colors
+optional flag to provide - `-q`/`--quantity`. This flag defines how many colors
 to generate from the palette:
 
 <img alt="Combination" src="public/combination.png" width="100%" />

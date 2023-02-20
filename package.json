@@ -68,6 +68,7 @@
     "color",
     "colors",
     "web",
+    "cvet",
     "cli"
   ],
   "types": "dist/index.d.ts"
