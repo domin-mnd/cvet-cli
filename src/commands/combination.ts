@@ -1,6 +1,6 @@
 import { Args, Command, Flags } from "@oclif/core";
 import { combination } from "cvet";
-import type { HEX } from "cvet/dist/types/lib/types";
+import type { HEX } from "cvet/types";
 import { color } from "@oclif/color";
 
 export default class Combination extends Command {
@@ -27,7 +27,7 @@ export default class Combination extends Command {
 
   public async run(): Promise<void> {
     const { args, flags } = await this.parse(Combination);
-    this.log(`Generating ${color.cmd("palette")}...`);
+    this.log(`Generating ${color.hex(args.hex).bold("palette")}...`);
 
     if (!args.hex.startsWith("#")) {
       this.log(`Prepending ${color.cmd("#")}...`);

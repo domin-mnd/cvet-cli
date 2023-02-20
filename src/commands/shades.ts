@@ -1,6 +1,6 @@
 import { Args, Command } from "@oclif/core";
 import { shades } from "cvet";
-import type { HEX } from "cvet/dist/types/lib/types";
+import type { HEX } from "cvet/types";
 import { color } from "@oclif/color";
 
 export default class Shades extends Command {
@@ -21,7 +21,7 @@ export default class Shades extends Command {
 
   public async run(): Promise<void> {
     const { args } = await this.parse(Shades);
-    this.log(`Generating ${color.cmd("palette")}...`);
+    this.log(`Generating ${color.hex(args.hex).bold("palette")}...`);
 
     if (!args.hex.startsWith("#")) {
       this.log(`Prepending ${color.cmd("#")}...`);

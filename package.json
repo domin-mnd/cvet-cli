@@ -9,7 +9,10 @@
   "homepage": "https://github.com/Domin-MND/cvet-cli",
   "license": "MIT",
   "main": "dist/index.js",
-  "repository": "Domin-MND/cvet-cli",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Domin-MND/cvet-cli.git"
+  },
   "files": [
     "/bin",
     "/dist",
@@ -21,7 +24,7 @@
     "@oclif/core": "^2",
     "@oclif/plugin-help": "^5",
     "@oclif/plugin-not-found": "^2.3.20",
-    "cvet": "^2.2.2"
+    "cvet": "^2.2.5"
   },
   "devDependencies": {
     "@oclif/test": "^2.3.6",
