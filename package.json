@@ -27,7 +27,7 @@
     "cvet": "^2.2.6"
   },
   "devDependencies": {
-    "@oclif/test": "^2.3.6",
+    "@oclif/test": "^2.3.7",
     "@types/chai": "^4",
     "@types/mocha": "^9.0.0",
     "@types/node": "^16.18.12",
