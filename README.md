@@ -24,21 +24,26 @@ package therefore it has a limited number of commands to work with:
 - `combination` - Generate a palette of color combinations.
 - `complementary` - Generate a complementary color - a 180 degrees hue rotated color (opposite).
 - `rainbow` - Generate a rainbow of colors (7 colors) from the provided color.
-- `shades` - Generate an octad of shades (8 colors) from the provided color.
+- `shades` - Generate an array of shades from the provided color.
 - `square` - Generate a square of colors (4 colors) from the provided color.
-- `tints` - Generate an octad of tints (8 colors) from the provided color.
-- `tones` - Generate an octad of tones (8 colors) from the provided color.
+- `tints` - Generate an array of tints from the provided color.
+- `tones` - Generate an array of tones from the provided color.
 - `triade` - Generate a triade of colors (3 colors) from the provided color.
+- `visualize` - Visualize an array of provided colors.
 
 Each of those commands require an argument - HEX of the color:
 
 <img alt="Tints" src="public/tints.png" width="100%" />
 
-However there's a little exception - `combination` command which has an
+However there are exceptions - `combination`, `shades`, `tints`, `tones` commands that have an
 optional flag to provide - `-q`/`--quantity`. This flag defines how many colors
 to generate from the palette:
 
 <img alt="Combination" src="public/combination.png" width="100%" />
+
+The `visualizer` command on the other hand only requires a single flag - `-h`/`--hex` array separated by commas to visualize colors:
+
+<img alt="Visualize" src="public/visualize.png" width="100%" />
 
 # Documentation
 

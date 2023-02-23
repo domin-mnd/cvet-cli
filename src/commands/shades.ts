@@ -4,13 +4,12 @@ import type { HEX } from "cvet/types";
 import { color } from "@oclif/color";
 
 export default class Shades extends Command {
-  static description =
-    "Generate an array of shades with a provided quantity.";
+  static description = "Generate an array of shades with a provided quantity.";
 
   static examples = [
     "<%= config.bin %> <%= command.id %> 62c62c --quantity 8",
     '<%= config.bin %> <%= command.id %> "#62c62c" -q=8',
-    '<%= config.bin %> <%= command.id %> 62c62c',
+    "<%= config.bin %> <%= command.id %> 62c62c",
   ];
 
   static flags = {
@@ -18,7 +17,7 @@ export default class Shades extends Command {
       char: "q",
       description: "Quantity of colors to generate",
       default: "8",
-      required: false
+      required: false,
     }),
   };
 

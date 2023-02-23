@@ -4,8 +4,7 @@ import type { HEX } from "cvet/types";
 import { color } from "@oclif/color";
 
 export default class Square extends Command {
-  static description =
-    "Generate a square of colors (4 colors).";
+  static description = "Generate a square of colors (4 colors).";
 
   static examples = [
     "<%= config.bin %> <%= command.id %> 62c62c",
