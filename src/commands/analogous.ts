@@ -20,7 +20,7 @@ export default class Analogous extends Command {
 
   public async run(): Promise<void> {
     const { args } = await this.parse(Analogous);
-    this.log(`Generating ${color.hex(args.hex).bold("palette")}...`);
+    this.log(`Generating ${color.cmd("palette")}...`);
 
     if (!args.hex.startsWith("#")) {
       this.log(`Prepending ${color.cmd("#")}...`);

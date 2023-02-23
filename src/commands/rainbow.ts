@@ -5,7 +5,7 @@ import { color } from "@oclif/color";
 
 export default class Rainbow extends Command {
   static description =
-    "Generate a rainbow of colors (7 colors) from the provided color.";
+    "Generate a rainbow of colors (7 colors).";
 
   static examples = [
     "<%= config.bin %> <%= command.id %> 62c62c",
@@ -21,7 +21,7 @@ export default class Rainbow extends Command {
 
   public async run(): Promise<void> {
     const { args } = await this.parse(Rainbow);
-    this.log(`Generating ${color.hex(args.hex).bold("palette")}...`);
+    this.log(`Generating ${color.cmd("palette")}...`);
 
     if (!args.hex.startsWith("#")) {
       this.log(`Prepending ${color.cmd("#")}...`);

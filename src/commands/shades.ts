@@ -1,16 +1,26 @@
-import { Args, Command } from "@oclif/core";
+import { Args, Command, Flags } from "@oclif/core";
 import { shades } from "cvet";
 import type { HEX } from "cvet/types";
 import { color } from "@oclif/color";
 
 export default class Shades extends Command {
   static description =
-    "Generate an octad of shades (8 colors) from the provided color.";
+    "Generate an array of shades with a provided quantity.";
 
   static examples = [
-    "<%= config.bin %> <%= command.id %> 62c62c",
-    '<%= config.bin %> <%= command.id %> "#62c62c"',
+    "<%= config.bin %> <%= command.id %> 62c62c --quantity 8",
+    '<%= config.bin %> <%= command.id %> "#62c62c" -q=8',
+    '<%= config.bin %> <%= command.id %> 62c62c',
   ];
+
+  static flags = {
+    quantity: Flags.string({
+      char: "q",
+      description: "Quantity of colors to generate",
+      default: "8",
+      required: false
+    }),
+  };
 
   static args = {
     hex: Args.string({
@@ -20,8 +30,8 @@ export default class Shades extends Command {
   };
 
   public async run(): Promise<void> {
-    const { args } = await this.parse(Shades);
-    this.log(`Generating ${color.hex(args.hex).bold("palette")}...`);
+    const { args, flags } = await this.parse(Shades);
+    this.log(`Generating ${color.cmd("palette")}...`);
 
     if (!args.hex.startsWith("#")) {
       this.log(`Prepending ${color.cmd("#")}...`);
@@ -36,7 +46,7 @@ export default class Shades extends Command {
       );
     }
 
-    const colors = shades(args.hex as HEX);
+    const colors = shades(args.hex as HEX, +flags.quantity);
 
     const coloredColors = colors.map((hex: HEX) => color.hex(hex).bold(hex));
 

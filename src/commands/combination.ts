@@ -27,7 +27,7 @@ export default class Combination extends Command {
 
   public async run(): Promise<void> {
     const { args, flags } = await this.parse(Combination);
-    this.log(`Generating ${color.hex(args.hex).bold("palette")}...`);
+    this.log(`Generating ${color.cmd("palette")}...`);
 
     if (!args.hex.startsWith("#")) {
       this.log(`Prepending ${color.cmd("#")}...`);

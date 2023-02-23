@@ -5,7 +5,7 @@ import { color } from "@oclif/color";
 
 export default class Square extends Command {
   static description =
-    "Generate a square of colors (4 colors) from the provided color.";
+    "Generate a square of colors (4 colors).";
 
   static examples = [
     "<%= config.bin %> <%= command.id %> 62c62c",
@@ -21,7 +21,7 @@ export default class Square extends Command {
 
   public async run(): Promise<void> {
     const { args } = await this.parse(Square);
-    this.log(`Generating ${color.hex(args.hex).bold("palette")}...`);
+    this.log(`Generating ${color.cmd("palette")}...`);
 
     if (!args.hex.startsWith("#")) {
       this.log(`Prepending ${color.cmd("#")}...`);

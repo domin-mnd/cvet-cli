@@ -21,7 +21,7 @@ export default class Complementary extends Command {
 
   public async run(): Promise<void> {
     const { args } = await this.parse(Complementary);
-    this.log(`Generating ${color.hex(args.hex).bold("palette")}...`);
+    this.log(`Generating ${color.cmd("palette")}...`);
 
     if (!args.hex.startsWith("#")) {
       this.log(`Prepending ${color.cmd("#")}...`);
