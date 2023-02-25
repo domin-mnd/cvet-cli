@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="cvet" src="public/cvet.svg" />
+  <img alt="cvet" src="public/cvet.svg" width="100" />
 </p>
 
 # Overview
